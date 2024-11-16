@@ -22,7 +22,10 @@
             "input": "apps/stock-market/public"
           }
         ],
-        "styles": ["apps/stock-market/src/styles.scss"],
+        "styles": [
+          "apps/stock-market/src/styles.scss",
+          "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
+        ],
         "scripts": []
       },
       "configurations": {
