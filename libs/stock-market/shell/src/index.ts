@@ -1,0 +1,1 @@
+export * from './lib/stock-market-app.config';

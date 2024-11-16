@@ -14,7 +14,24 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@stock-market/shared-models": ["libs/shared/models/src/index.ts"],
+      "@stock-market/stock-market-shell": [
+        "libs/stock-market/shell/src/index.ts"
+      ],
+      "@stock-market/stocks-data-access": [
+        "libs/stock-market/stocks/data-access/src/index.ts"
+      ],
+      "@stock-market/stocks-features-details": [
+        "libs/stock-market/stocks/features/details/src/index.ts"
+      ],
+      "@stock-market/stocks-features-search": [
+        "libs/stock-market/stocks/features/search/src/index.ts"
+      ],
+      "@stock-market/stocks-shell": [
+        "libs/stock-market/stocks/features/shell/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
