@@ -1,4 +1,4 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
-
-bootstrapApplication(AppComponent).catch((err) => console.error(err));
+import { StockMarketAppComponent } from './app/stock-market.component';
+import { stockMarketAppConfig } from '@stock-market/stock-market-shell';
+bootstrapApplication(StockMarketAppComponent, stockMarketAppConfig).then
