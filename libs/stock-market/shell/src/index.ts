@@ -1,1 +1,1 @@
-export * from './lib/stock-market-app.config';
+export * from './lib/stock-market-app.providers';

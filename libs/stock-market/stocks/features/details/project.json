@@ -4,7 +4,7 @@
   "sourceRoot": "libs/stock-market/stocks/features/details/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": ["type:feature", "scope:stocks"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",

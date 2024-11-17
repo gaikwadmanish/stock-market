@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@stock-market/shared-config": ["libs/shared/config/src/index.ts"],
       "@stock-market/shared-models": ["libs/shared/models/src/index.ts"],
       "@stock-market/stock-market-shell": [
         "libs/stock-market/shell/src/index.ts"
