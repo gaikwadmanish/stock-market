@@ -18,6 +18,4 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss',
 })
-export class MainLayoutComponent {
-  isCollapsed = false;
-}
+export class MainLayoutComponent {}

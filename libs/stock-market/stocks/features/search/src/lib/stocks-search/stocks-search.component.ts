@@ -1,6 +1,5 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StockApiService } from '@stock-market/stocks-data-access';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 
@@ -11,7 +10,6 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
   templateUrl: './stocks-search.component.html',
 })
 export class StocksSearchComponent implements OnInit {
-  stockApiService = inject(StockApiService);
   listOfData: Array<{ name: string; age: number; address: string }> = [];
 
   ngOnInit(): void {

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { StocksSearchComponent } from './stocks-search.component';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('StocksSearchComponent', () => {
   let component: StocksSearchComponent;
@@ -8,6 +9,7 @@ describe('StocksSearchComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [StocksSearchComponent],
+      providers: [provideHttpClient()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(StocksSearchComponent);
