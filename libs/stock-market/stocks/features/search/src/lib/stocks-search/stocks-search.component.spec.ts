@@ -13,7 +13,6 @@ import { of } from 'rxjs';
 describe('StocksSearchComponent', () => {
   let component: StocksSearchComponent;
   let fixture: ComponentFixture<StocksSearchComponent>;
-  let store: StockSymbolsStore;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [StocksSearchComponent],
@@ -31,7 +30,6 @@ describe('StocksSearchComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(StocksSearchComponent);
-    store = TestBed.inject(StockSymbolsStore);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
