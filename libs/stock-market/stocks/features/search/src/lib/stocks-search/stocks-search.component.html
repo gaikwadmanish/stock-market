@@ -1,40 +1,32 @@
-<nz-table
-  #fixedTable
-  [nzData]="listOfData"
-  [nzScroll]="{ x: '1000px', y: '240px' }"
->
-  <thead>
-    <tr>
-      <th nzLeft>Full Name</th>
-      <th nzLeft>Age</th>
-      <th>Column 1</th>
-      <th>Column 2</th>
-      <th>Column 3</th>
-      <th>Column 4</th>
-      <th>Column 5</th>
-      <th>Column 6</th>
-      <th>Column 7</th>
-      <th>Column 8</th>
-      <th nzRight>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    @for (data of fixedTable.data; track data) {
-    <tr>
-      <td nzLeft>{{ data.name }}</td>
-      <td nzLeft>{{ data.age }}</td>
-      <td nzBreakWord>{{ data.address }}</td>
-      <td nzBreakWord>{{ data.address }}</td>
-      <td nzBreakWord>{{ data.address }}</td>
-      <td nzBreakWord>{{ data.address }}</td>
-      <td nzBreakWord>{{ data.address }}</td>
-      <td nzBreakWord>{{ data.address }}</td>
-      <td nzBreakWord>{{ data.address }}</td>
-      <td nzBreakWord>{{ data.address }}</td>
-      <td nzRight>
-        <a>action</a>
-      </td>
-    </tr>
-    }
-  </tbody>
-</nz-table>
+@if (stockSymbolStore.$stockSymbolState | async; as stockSymbolState) {
+  @if (stockSymbolState.data) {
+    <nz-table nzSize="small" [nzData]="stockSymbolState.data" [nzPageSize]="10">
+      <thead>
+        <tr>
+          <th nzLeft>Company Name</th>
+          <th>FIGI identifier</th>
+          <th>Currency</th>
+          <th nzRight>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (data of stockSymbolState.data; track data.symbol) {
+          <tr>
+            <!-- <td nzLeft><b>{{ data.symbol }}</b></td> -->
+            <td nzLeft>
+              {{ data.description }}
+              <nz-tag nzColor="processing">{{ data.symbol }}</nz-tag>
+            </td>
+            <td>{{ data.figi }}</td>
+            <td>{{ data.currency }}</td>
+            <td nzRight>
+              <button nz-button (click)="viewDetails(data)">
+                View Details
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </nz-table>
+  }
+}

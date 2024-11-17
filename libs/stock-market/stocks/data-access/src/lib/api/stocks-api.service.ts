@@ -8,12 +8,12 @@ import { StockSymbol } from '@stock-market/shared-models';
   providedIn: 'root',
 })
 export class StockApiService {
-  httpClient = inject(HttpClient);
-  appConfig = inject(APP_CONFIG);
+  private readonly httpClient = inject(HttpClient);
+  private readonly appConfig = inject(APP_CONFIG);
 
   getStockList(): Observable<StockSymbol[]> {
     return this.httpClient.get<StockSymbol[]>(
-      `${this.appConfig.apiBaseUrl}/symbol?exchange=AS`
+      `${this.appConfig.apiBaseUrl}api/v1/stocks?limit=50`,
     );
   }
 }
