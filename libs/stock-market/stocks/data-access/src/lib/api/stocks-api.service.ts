@@ -13,7 +13,7 @@ export class StockApiService {
 
   getStockList(): Observable<StockSymbol[]> {
     return this.httpClient.get<StockSymbol[]>(
-      `${this.appConfig.apiBaseUrl}api/v1/stocks?limit=50`,
+      `${this.appConfig.apiBaseUrl}api/v1/stocks?limit=1000`,
     );
   }
 }

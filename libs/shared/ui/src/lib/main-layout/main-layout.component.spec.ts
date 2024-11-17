@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MainLayoutComponent } from './main-layout.component';
 import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 
 describe('MainLayoutComponent', () => {
   let component: MainLayoutComponent;
@@ -9,7 +10,7 @@ describe('MainLayoutComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [MainLayoutComponent],
-      providers: [provideHttpClient()],
+      providers: [provideHttpClient(), provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MainLayoutComponent);
@@ -39,7 +40,7 @@ describe('MainLayoutComponent', () => {
   it('should render the sidebar menu items', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const menuItems = compiled.querySelectorAll(
-      'nz-sider ul[nz-menu] li[nz-menu-item]'
+      'nz-sider ul[nz-menu] li[nz-menu-item]',
     );
     expect(menuItems.length).toBe(4);
   });
@@ -47,7 +48,7 @@ describe('MainLayoutComponent', () => {
   it('should display correct icons in the sidebar', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const icons = compiled.querySelectorAll(
-      'nz-sider ul[nz-menu] span[nz-icon]'
+      'nz-sider ul[nz-menu] span[nz-icon]',
     );
     expect(icons.length).toBe(4);
   });

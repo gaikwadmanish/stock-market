@@ -1,6 +1,13 @@
 @if (stockSymbolStore.$stockSymbolState | async; as stockSymbolState) {
   @if (stockSymbolState.data) {
-    <nz-table nzSize="small" [nzData]="stockSymbolState.data" [nzPageSize]="10">
+    <nz-table
+      nzSize="small"
+      #stockSymbolTable
+      [nzData]="stockSymbolState.data"
+      [nzPageSize]="10"
+      nzShowPagination="true"
+      nzFrontPagination="true"
+    >
       <thead>
         <tr>
           <th nzLeft>Company Name</th>
@@ -10,17 +17,16 @@
         </tr>
       </thead>
       <tbody>
-        @for (data of stockSymbolState.data; track data.symbol) {
+        @for (stockSymbol of stockSymbolTable.data; track stockSymbol.symbol) {
           <tr>
-            <!-- <td nzLeft><b>{{ data.symbol }}</b></td> -->
             <td nzLeft>
-              {{ data.description }}
-              <nz-tag nzColor="processing">{{ data.symbol }}</nz-tag>
+              {{ stockSymbol.description }}
+              <nz-tag nzColor="processing">{{ stockSymbol.symbol }}</nz-tag>
             </td>
-            <td>{{ data.figi }}</td>
-            <td>{{ data.currency }}</td>
+            <td>{{ stockSymbol.figi }}</td>
+            <td>{{ stockSymbol.currency }}</td>
             <td nzRight>
-              <button nz-button (click)="viewDetails(data)">
+              <button nz-button (click)="viewDetails(stockSymbol)">
                 View Details
               </button>
             </td>

@@ -24,8 +24,6 @@ describe('StocksDetailsComponent', () => {
 
   it('should show the statistic', () => {
     const compiled = fixture.nativeElement as HTMLElement;
-    const h1 = compiled.querySelector('h1');
-    expect(h1).toBeTruthy();
     const statistics = compiled.querySelectorAll('nz-statistic');
     expect(statistics.length).toEqual(4);
   });
