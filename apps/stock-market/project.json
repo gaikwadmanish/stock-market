@@ -4,10 +4,10 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/stock-market/src",
-  "tags": [],
+  "tags": ["type:app"],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/stock-market",
@@ -16,6 +16,9 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/stock-market/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "customWebpackConfig": {
+          "path": "/apps/stock-market/webpack.config.js"
+        },
         "assets": [
           {
             "glob": "**/*",
@@ -56,7 +59,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@nx/angular:dev-server",
       "configurations": {
         "production": {
           "buildTarget": "stock-market:build:production"

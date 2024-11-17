@@ -4,7 +4,7 @@
   "sourceRoot": "libs/stock-market/stocks/data-access/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": ["type:data-access", "scope:stocks"],
   "targets": {
     "test": {
       "executor": "@nx/jest:jest",
