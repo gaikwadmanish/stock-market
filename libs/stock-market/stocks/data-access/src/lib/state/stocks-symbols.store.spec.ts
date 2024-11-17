@@ -6,6 +6,7 @@ import {
 import { StockApiService } from '../api/stocks-api.service';
 import { of, throwError } from 'rxjs';
 import { StockSymbol } from '@stock-market/shared-models';
+import { provideComponentStore } from '@ngrx/component-store';
 
 describe('StockSymbolsStore', () => {
   let store: StockSymbolsStore;
@@ -20,7 +21,7 @@ describe('StockSymbolsStore', () => {
     // Configure TestBed
     TestBed.configureTestingModule({
       providers: [
-        StockSymbolsStore,
+        provideComponentStore(StockSymbolsStore),
         { provide: StockApiService, useValue: stockApiServiceMock },
       ],
     });
@@ -38,14 +39,19 @@ describe('StockSymbolsStore', () => {
 
   it('should handle successful getStockSymbols effect', (done) => {
     const mockStockSymbols: StockSymbol[] = [
-      //   { symbol: 'AAPL', name: 'Apple Inc.' },
-      //   { symbol: 'GOOGL', name: 'Alphabet Inc.' },
+      {
+        currency: 'USD',
+        description: 'SUBSTRATE ARTIFICIAL INTELIG',
+        displaySymbol: 'SUIAF',
+        figi: 'BBG01BPGN3Z1',
+        isin: '',
+        mic: 'OOTC',
+        symbol: 'SUIAF',
+      },
     ];
 
-    // Mock API call
     stockApiServiceMock.getStockList.mockReturnValue(of(mockStockSymbols));
 
-    // Subscribe to state updates
     store.$stockSymbolState.subscribe((state) => {
       if (state.status === 'success') {
         expect(state.data).toEqual(mockStockSymbols);
@@ -54,17 +60,16 @@ describe('StockSymbolsStore', () => {
         done();
       }
     });
+    store.getStockSymbols();
   });
 
   it('should handle error in getStockSymbols effect', (done) => {
     const mockError = new Error('API failure');
 
-    // Mock API call
     stockApiServiceMock.getStockList.mockReturnValue(
       throwError(() => mockError),
     );
 
-    // Subscribe to state updates
     store.$stockSymbolState.subscribe((state) => {
       if (state.status === 'error') {
         expect(state.data).toBeNull();
@@ -74,7 +79,6 @@ describe('StockSymbolsStore', () => {
       }
     });
 
-    // Trigger the effect
-    // store.getStockSymbols();
+    store.getStockSymbols();
   });
 });

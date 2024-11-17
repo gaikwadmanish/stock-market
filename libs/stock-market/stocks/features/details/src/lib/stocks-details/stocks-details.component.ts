@@ -58,6 +58,6 @@ export class StocksDetailsComponent implements OnInit {
     symbol: 'AAPL',
   };
   ngOnInit(): void {
-    console.log(this.stockSymbol(), history.state.description);
+    console.log(this.stockSymbol());
   }
 }
