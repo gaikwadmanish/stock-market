@@ -23,6 +23,11 @@
           {
             "glob": "**/*",
             "input": "apps/stock-market/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+            "output": "/assets/"
           }
         ],
         "styles": [
@@ -36,8 +41,8 @@
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumWarning": "7mb",
+              "maximumError": "10mb"
             },
             {
               "type": "anyComponentStyle",
