@@ -4,9 +4,7 @@ import { APP_CONFIG } from '@stock-market/shared-config';
 import { Observable } from 'rxjs';
 import { StockSymbol } from '@stock-market/shared-models';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class StockApiService {
   private readonly httpClient = inject(HttpClient);
   private readonly appConfig = inject(APP_CONFIG);

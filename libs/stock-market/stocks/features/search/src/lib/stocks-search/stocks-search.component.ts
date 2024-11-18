@@ -6,7 +6,10 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { ActivatedRoute, Router } from '@angular/router';
 import { provideComponentStore } from '@ngrx/component-store';
-import { StockSymbolsStore } from '@stock-market/stocks-data-access';
+import {
+  StockApiService,
+  StockSymbolsStore,
+} from '@stock-market/stocks-data-access';
 import { StockSymbol } from '@stock-market/shared-models';
 
 @Component({
@@ -19,7 +22,7 @@ import { StockSymbol } from '@stock-market/shared-models';
     NzDividerModule,
     NzTagModule,
   ],
-  providers: [provideComponentStore(StockSymbolsStore)],
+  providers: [StockApiService, provideComponentStore(StockSymbolsStore)],
   templateUrl: './stocks-search.component.html',
 })
 export class StocksSearchComponent implements OnInit {
