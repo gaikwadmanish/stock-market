@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { APP_CONFIG } from '@stock-market/shared-config';
+import { APP_CONFIG } from '@trading-sphere/shared/config';
 import { Observable } from 'rxjs';
-import { StockSymbol } from '@stock-market/shared-models';
+import { StockSymbol } from '@trading-sphere/shared/models';
 
 @Injectable()
 export class StockApiService {

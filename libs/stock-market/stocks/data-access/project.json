@@ -1,5 +1,5 @@
 {
-  "name": "stocks-data-access",
+  "name": "stocks/data-access",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/stock-market/stocks/data-access/src",
   "prefix": "lib",

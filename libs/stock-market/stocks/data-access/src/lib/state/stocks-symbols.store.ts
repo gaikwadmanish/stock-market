@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { ComponentStore, OnStoreInit } from '@ngrx/component-store';
-import { AppStoreBaseState, StockSymbol } from '@stock-market/shared-models';
+import { AppStoreBaseState, StockSymbol } from '@trading-sphere/shared/models';
 import { pipe, switchMap, tap } from 'rxjs';
 import { tapResponse } from '@ngrx/operators';
 import { StockApiService } from '../api/stocks-api.service';

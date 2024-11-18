@@ -1,4 +1,4 @@
-import { AppConfig } from '@stock-market/shared-config';
+import { AppConfig } from '@trading-sphere/shared/config';
 
 export const environment: AppConfig = {
   apiBaseUrl: process.env.STOCK_MARKET_API_URL,

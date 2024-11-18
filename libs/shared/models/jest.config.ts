@@ -1,5 +1,5 @@
 export default {
-  displayName: 'shared-models',
+  displayName: 'trading-sphere/shared/models',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../coverage/libs/shared/models',

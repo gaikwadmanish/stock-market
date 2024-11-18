@@ -5,7 +5,7 @@ import {
 } from './stocks-symbols.store';
 import { StockApiService } from '../api/stocks-api.service';
 import { of, throwError } from 'rxjs';
-import { StockSymbol } from '@stock-market/shared-models';
+import { StockSymbol } from '@trading-sphere/shared/models';
 import { provideComponentStore } from '@ngrx/component-store';
 
 describe('StockSymbolsStore', () => {

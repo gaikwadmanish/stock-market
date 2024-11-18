@@ -1,5 +1,5 @@
 export default {
-  displayName: 'stocks-shell',
+  displayName: 'stocks/shell',
   preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory:

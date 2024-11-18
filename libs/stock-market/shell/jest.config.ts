@@ -1,5 +1,5 @@
 export default {
-  displayName: 'stock-market-shell',
+  displayName: 'stock-market/shell',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../coverage/libs/stock-market/shell',

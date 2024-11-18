@@ -1,5 +1,5 @@
 export default {
-  displayName: 'stocks-features-search',
+  displayName: 'stocks/search',
   preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory:
