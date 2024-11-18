@@ -1,5 +1,5 @@
 export default {
-  displayName: 'stocks-data-access',
+  displayName: 'stocks/data-access',
   preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory:

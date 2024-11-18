@@ -1,5 +1,5 @@
 export default {
-  displayName: 'shared-config',
+  displayName: 'trading-sphere/shared/config',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../coverage/libs/shared/config',

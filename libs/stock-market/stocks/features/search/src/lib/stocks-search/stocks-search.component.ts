@@ -9,8 +9,8 @@ import { provideComponentStore } from '@ngrx/component-store';
 import {
   StockApiService,
   StockSymbolsStore,
-} from '@stock-market/stocks-data-access';
-import { StockSymbol } from '@stock-market/shared-models';
+} from '@stock-market/stocks/data-access';
+import { StockSymbol } from '@trading-sphere/shared/models';
 
 @Component({
   selector: 'lib-stocks-search',

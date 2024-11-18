@@ -1,5 +1,5 @@
 {
-  "name": "stocks-shell",
+  "name": "stocks/shell",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/stock-market/stocks/features/shell/src",
   "prefix": "lib",

@@ -1,5 +1,5 @@
 {
-  "name": "shared-config",
+  "name": "trading-sphere/shared/config",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/config/src",
   "prefix": "lib",
