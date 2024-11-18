@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -14,6 +14,8 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     NzIconModule,
     NzMenuModule,
     NzLayoutModule,
+    RouterLink,
+    RouterLinkActive,
   ],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.scss',

@@ -1,1 +1,48 @@
-<p>stocks-features-details works!</p>
+<h2>Stock Details</h2>
+<nz-row [nzGutter]="16">
+  <nz-col [nzSpan]="6">
+    <nz-card>
+      <nz-statistic
+        [nzValue]="stockDetails.metric['52WeekHigh']"
+        nzTitle="52 week high"
+        [nzSuffix]="prefixTplOne"
+        nzPrefix="$"
+        [nzValueStyle]="{ color: '#3F8600' }"
+      ></nz-statistic>
+      <ng-template #prefixTplOne
+        ><span nz-icon nzType="arrow-up"></span
+      ></ng-template>
+    </nz-card>
+  </nz-col>
+  <nz-col [nzSpan]="6">
+    <nz-card>
+      <nz-statistic
+        [nzValue]="stockDetails.metric['52WeekLow']"
+        nzTitle="52 week low"
+        [nzSuffix]="prefixTplTwo"
+        nzPrefix="$"
+        [nzValueStyle]="{ color: '#CF1322' }"
+      ></nz-statistic>
+      <ng-template #prefixTplTwo
+        ><span nz-icon nzType="arrow-down"></span
+      ></ng-template>
+    </nz-card>
+  </nz-col>
+  <nz-col [nzSpan]="6">
+    <nz-card>
+      <nz-statistic
+        [nzValue]="stockDetails.metric['52WeekPriceReturnDaily']"
+        nzTitle="52 week price return daily"
+        nzPrefix="$"
+      ></nz-statistic>
+    </nz-card>
+  </nz-col>
+  <nz-col [nzSpan]="6">
+    <nz-card>
+      <nz-statistic
+        [nzValue]="stockDetails.metric['10DayAverageTradingVolume']"
+        nzTitle="10 day average trading volume"
+      ></nz-statistic>
+    </nz-card>
+  </nz-col>
+</nz-row>

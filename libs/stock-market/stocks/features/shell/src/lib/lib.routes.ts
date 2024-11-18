@@ -5,19 +5,19 @@ export const stocksShellRoutes: Routes = [
     path: 'search',
     loadComponent: () =>
       import('@stock-market/stocks-features-search').then(
-        (c) => c.StocksSearchComponent
+        (c) => c.StocksSearchComponent,
       ),
   },
   {
-    path: 'details',
+    path: 'details/:stockSymbol',
     loadComponent: () =>
       import('@stock-market/stocks-features-details').then(
-        (c) => c.StocksDetailsComponent
+        (c) => c.StocksDetailsComponent,
       ),
   },
   {
     path: '',
     redirectTo: 'search',
-    pathMatch: 'prefix'
-  }
+    pathMatch: 'prefix',
+  },
 ];
