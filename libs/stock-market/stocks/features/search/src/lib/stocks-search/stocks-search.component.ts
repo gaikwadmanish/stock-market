@@ -9,7 +9,7 @@ import { provideComponentStore } from '@ngrx/component-store';
 import {
   StockApiService,
   StockSymbolsStore,
-} from '@stock-market/stocks/data-access';
+} from '@trading-sphere/stock-market/stocks/data-access';
 import { StockSymbol } from '@trading-sphere/shared/models';
 
 @Component({
@@ -22,7 +22,7 @@ import { StockSymbol } from '@trading-sphere/shared/models';
     NzDividerModule,
     NzTagModule,
   ],
-  providers: [StockApiService, provideComponentStore(StockSymbolsStore)],
+  providers: [provideComponentStore(StockSymbolsStore), StockApiService],
   templateUrl: './stocks-search.component.html',
 })
 export class StocksSearchComponent implements OnInit {

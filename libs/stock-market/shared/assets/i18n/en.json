@@ -1,0 +1,13 @@
+{
+  "ui": {
+    "main-layout": {
+      "logo-text": "Stock Market App",
+      "menu-item": {
+        "stocks": "Stocks",
+        "portfolio": "Portfolio",
+        "watchList": "Watch List",
+        "riskAssessment": "Risk Assessment"
+      }
+    }
+  }
+}
