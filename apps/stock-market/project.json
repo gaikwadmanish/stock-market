@@ -28,6 +28,16 @@
             "glob": "**/*",
             "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
             "output": "/assets/"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/stock-market/shared/assets/i18n",
+            "output": "/assets/i18n/stock-market-shared/"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/stock-market/stocks/assets/i18n",
+            "output": "/assets/i18n/stock-market-stocks/"
           }
         ],
         "styles": [
@@ -53,6 +63,7 @@
           "outputHashing": "all"
         },
         "development": {
+          "outputPath": "dist/apps/stock-market",
           "buildOptimizer": false,
           "optimization": false,
           "vendorChunk": true,

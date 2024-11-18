@@ -5,7 +5,7 @@ import { provideComponentStore } from '@ngrx/component-store';
 import {
   StockApiService,
   StockSymbolsStore,
-} from '@stock-market/stocks/data-access';
+} from '@trading-sphere/stock-market/stocks/data-access';
 import { provideAppConfig } from '@trading-sphere/shared/config';
 import { provideRouter } from '@angular/router';
 import { of } from 'rxjs';

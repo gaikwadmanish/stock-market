@@ -15,22 +15,27 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@stock-market/shell": ["libs/stock-market/shell/src/index.ts"],
-      "@stock-market/stocks/data-access": [
-        "libs/stock-market/stocks/data-access/src/index.ts"
-      ],
-      "@stock-market/stocks/details": [
-        "libs/stock-market/stocks/features/details/src/index.ts"
-      ],
-      "@stock-market/stocks/search": [
-        "libs/stock-market/stocks/features/search/src/index.ts"
-      ],
-      "@stock-market/stocks/shell": [
-        "libs/stock-market/stocks/features/shell/src/index.ts"
-      ],
       "@trading-sphere/shared/config": ["libs/shared/config/src/index.ts"],
       "@trading-sphere/shared/models": ["libs/shared/models/src/index.ts"],
-      "@trading-sphere/shared/ui": ["libs/shared/ui/src/index.ts"]
+      "@trading-sphere/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@trading-sphere/stock-market/shared/ui": [
+        "libs/stock-market/shared/ui/src/index.ts"
+      ],
+      "@trading-sphere/stock-market/shell": [
+        "libs/stock-market/shell/src/index.ts"
+      ],
+      "@trading-sphere/stock-market/stocks/data-access": [
+        "libs/stock-market/stocks/data-access/src/index.ts"
+      ],
+      "@trading-sphere/stock-market/stocks/details": [
+        "libs/stock-market/stocks/features/details/src/index.ts"
+      ],
+      "@trading-sphere/stock-market/stocks/search": [
+        "libs/stock-market/stocks/features/search/src/index.ts"
+      ],
+      "@trading-sphere/stock-market/stocks/shell": [
+        "libs/stock-market/stocks/features/shell/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
